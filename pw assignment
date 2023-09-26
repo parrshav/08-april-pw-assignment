@@ -1,0 +1,59 @@
+Q1. In order to predict house price based on several characteristics, such as location, square footage,number of bedrooms, etc., you are developing an SVM regression model. Which regression metric in thissituation would be the best to employ?
+In the context of predicting house prices using an SVM (Support Vector Machine) regression model, several regression metrics can be used to evaluate the model's performance. The choice of the best metric depends on the specific goals and requirements of your prediction task. Here are some commonly used regression metrics:
+
+Mean Absolute Error (MAE):
+
+Measures the average absolute differences between predicted and actual values.
+Suitable when you want to understand the average magnitude of errors in the predictions.
+Mean Squared Error (MSE):
+
+Measures the average squared differences between predicted and actual values.
+Emphasizes larger errors more than MAE.
+Sensitive to outliers and can penalize them heavily.
+Root Mean Squared Error (RMSE):
+
+Square root of the MSE, providing an interpretable scale (same as the target variable).
+Similar to MSE but on the original scale of the target variable.
+R-squared (R² or coefficient of determination):
+
+Measures the proportion of variance in the target variable that is predictable from the independent variables.
+Ranges from 0 to 1, where 1 indicates a perfect fit.
+Q2. You have built an SVM regression model and are trying to decide between using MSE or R-squared as your evaluation metric. Which metric would be more appropriate if your goal is to predict the actual price of a house as accurately as possible?
+If your goal is to predict the actual price of a house as accurately as possible, then Mean Squared Error (MSE) would be the more appropriate evaluation metric.
+
+Here's why:
+
+Mean Squared Error (MSE):
+
+MSE measures the average squared differences between predicted and actual values.
+It emphasizes larger errors more than smaller ones, providing a stronger penalty for significant deviations from the actual prices.
+Minimizing MSE leads to finding the best-fitting regression line or surface, which is crucial for accurately predicting house prices.
+R-squared (R²):
+
+R-squared measures the proportion of variance in the target variable that is predictable from the independent variables.
+While R-squared is valuable for understanding the overall goodness of fit of the model, it doesn't explicitly prioritize minimizing the deviation of predictions from actual values.
+A high R-squared value does not guarantee accurate predictions, especially if the goal is to minimize prediction errors.
+Q3. You have a dataset with a significant number of outliers and are trying to select an appropriate regression metric to use with your SVM model. Which metric would be the most appropriate in this scenario?
+Mean Absolute Error (MAE):
+
+MAE measures the average absolute differences between predicted and actual values.
+It is less sensitive to outliers compared to Mean Squared Error (MSE), making it a robust choice when dealing with datasets containing outliers.
+Outliers can significantly affect the mean in MSE, leading to potentially misleading results. MAE handles outliers more gracefully by focusing on absolute differences.
+Q4. You have built an SVM regression model using a polynomial kernel and are trying to select the best  metric to evaluate its performance. You have calculated both MSE and RMSE and found that both values are very close. Which metric should you choose to use in this case?
+In the scenario where you have built an SVM regression model using a polynomial kernel and both the Mean Squared Error (MSE) and Root Mean Squared Error (RMSE) are very close, it's generally appropriate to choose the Root Mean Squared Error (RMSE) as the evaluation metric.
+
+Here's why:
+
+RMSE:
+RMSE provides an interpretable scale as it's in the same units as the target variable.
+It has the advantage of penalizing larger errors more than smaller ones due to the square root operation, which aligns with the typical intuition of how errors impact predictions.
+RMSE is widely used and accepted in various fields, making it a standard choice for regression model evaluation.
+Q5. You are comparing the performance of different SVM regression models using different kernels (linear, polynomial, and RBF) and are trying to select the best evaluation metric. Which metric would be most appropriate if your goal is to measure how well the model explains the variance in the target variable?
+When your goal is to measure how well the model explains the variance in the target variable, the most appropriate evaluation metric is R-squared (R²).
+
+Here's why:
+
+R-squared (R²):
+R-squared measures the proportion of variance in the target variable that is predictable from the independent variables.
+It indicates the goodness of fit of the model, representing how well the model explains the variation in the target variable.
+R-squared ranges from 0 to 1, where 1 indicates a perfect fit, meaning the model explains all the variance in the target variable.
